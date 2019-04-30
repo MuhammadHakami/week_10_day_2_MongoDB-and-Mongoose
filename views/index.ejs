@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/company/new">add a new company</a>
+    <br>
+    <ul>
+    <% for (i in companies) { %>
+    <li>Name: <%= companies[i].name %></li>
+    <img src=<%= companies[i].logo %> />
+    <li>Address: <%= companies[i].address %></li>
+    <li>City: <%= companies[i].city %></li>
+    <li>Telephone: <%= companies[i].telephone %></li>
+    <a href="/company/<%= companies[i]._id %>">SHOW</a>
+    <br>
+    <hr>
+    <% } %>
+    </ul>
+</body>
+</html>

@@ -6,8 +6,8 @@ const companySchema=new Schema({
     address: {type: String, required: true},
     city: {type: String, required: true},
     telephone: {type: Number, required: true},
-    driver: [{name: String,age: Number,image: String}],
-    car: [{name: String, model: Number, year: Number,image: String}]
+    drivers: [{name: String,age: Number,image: String}],
+    cars: [{name: String, model: Number, year: Number,image: String}]
 }, {timestamps: true})
 
 const Company=mongoose.model('company',companySchema)
